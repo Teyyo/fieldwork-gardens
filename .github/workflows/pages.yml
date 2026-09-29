@@ -1,0 +1,44 @@
+name: Deploy garden studio to GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Check local links and assets
+        run: python3 scripts/check_site.py
+      - name: Set the 404 base path
+        env:
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: |
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+          from html import escape
+          page = Path('dist/404.html')
+          base = escape(os.environ['PAGES_BASE_PATH'].rstrip('/') + '/', quote=True)
+          page.write_text(page.read_text().replace('<base href="/"/>', f'<base href="{base}"/>'))
+          PY
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
