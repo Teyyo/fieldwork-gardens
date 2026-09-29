@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Start your garden | Fieldwork Garden Studio</title>
+<meta name="description" content="Try the Fieldwork demo enquiry form and prepare a garden project summary.">
+<meta name="theme-color" content="#244935">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23244935'/%3E%3Ctext x='10' y='31' font-size='32' font-family='Georgia' fill='%23f5f4ee'%3Ef%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="assets/js/main.js" defer>
+</script>
+<script src="assets/js/contact.js" defer>
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="index.html" aria-label="Fieldwork home">
+<span class="brand-mark" aria-hidden="true">f</span>
+<span class="brand-name">fieldwork<small>Garden design studio</small>
+</span>
+</a>
+<button class="menu-button" type="button" aria-controls="navigation" aria-expanded="false">Menu</button>
+<nav class="nav" id="navigation" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="gardens.html">Our gardens</a>
+<a href="services.html">Services</a>
+<a href="about.html">The studio</a>
+<a href="contact.html" aria-current="page" class="nav-cta">Start your garden</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<div class="wrap">
+<div class="page-heading">
+<span class="eyebrow">Start a conversation</span>
+<h1>What could your<br>garden become?</h1>
+<p>A few details are all we need to start understanding your space. There is no need to have it all figured out.</p>
+</div>
+</div>
+<div class="wrap contact-layout">
+<div>
+<form id="enquiry-form">
+<p class="form-note">Fields marked * are required. This demo prepares a summary; it does not send an enquiry.</p>
+<div class="form-grid">
+<div class="field">
+<label for="name">Your name *</label>
+<input id="name" name="name" autocomplete="name" required minlength="2" maxlength="100" aria-describedby="name-error">
+<p class="error" id="name-error">
+</p>
+</div>
+<div class="field">
+<label for="email">Email address *</label>
+<input id="email" name="email" type="email" autocomplete="email" required maxlength="254" aria-describedby="email-error">
+<p class="error" id="email-error">
+</p>
+</div>
+<div class="field">
+<label for="postcode">Postcode or town *</label>
+<input id="postcode" name="postcode" autocomplete="postal-code" required minlength="3" maxlength="100" aria-describedby="postcode-error">
+<p class="error" id="postcode-error">
+</p>
+</div>
+<div class="field">
+<label for="service">How can we help? *</label>
+<select id="service" name="service" required aria-describedby="service-error">
+<option value="">Choose a service</option value="Full garden design">Full garden design</option>
+<option value="Planting design">Planting design</option>
+<option value="Garden consultation">Garden consultation</option>
+</select>
+<p class="error" id="service-error">
+</p>
+</div>
+<div class="field">
+<label for="budget">Approximate total garden budget</label>
+<select id="budget" name="budget">
+<option value="">Not sure yet</option>
+<option>Under £5,000</option>
+<option>£5,000–£15,000</option>
+<option>£15,000–£30,000</option>
+<option>Over £30,000</option>
+</select>
+<p class="error" id="budget-error">
+</p>
+</div>
+<div class="field full">
+<label for="message">Tell us about your garden *</label>
+<textarea id="message" name="message" required minlength="20" maxlength="3000" aria-describedby="message-hint message-error">
+</textarea>
+<p id="message-hint" class="form-note">What would you like to change? How would you like to use the space?</p>
+<p class="error" id="message-error">
+</p>
+</div>
+</div>
+<label class="checkbox-label">
+<input type="checkbox" id="consent" name="consent" required aria-describedby="consent-error">I understand this is a demo and my enquiry will not be sent. *</label>
+<p class="error" id="consent-error">
+</p>
+<div class="form-actions">
+<button class="button" type="submit" disabled>Prepare my enquiry</button>
+</div>
+<noscript>
+<p>JavaScript is required to prepare the downloadable summary. No enquiry will be sent.</p>
+</noscript>
+</form>
+<section class="success" id="form-success" tabindex="-1" aria-labelledby="success-title" hidden>
+<h2 id="success-title">Your summary is ready.</h2>
+<p>Nothing has been sent. Download your enquiry to keep a copy.</p>
+<pre>
+</pre>
+<a download="fieldwork-enquiry.txt">Download enquiry summary</a>
+</section>
+</div>
+<aside class="contact-aside">
+<span class="eyebrow">The first step</span>
+<h2>Let’s make a little room for outside.</h2>
+<p>A clear idea, a rough sketch or simply a garden that doesn’t quite work. Any of those is a good place to begin.</p>
+<h3>Based in Bath</h3>
+<p>Working across Somerset and the surrounding area.</p>
+<h3>Studio hours</h3>
+<p>Monday–Friday<br>9am–5pm</p>
+<h3>Still exploring?</h3>
+<p>
+<a href="services.html">Compare our services</a>
+<br>
+<a href="faq.html">Read common questions</a>
+</p>
+<p class="demo-note">Fictional contact: hello@fieldwork.example<br>No messages are sent or stored.</p>
+</aside>
+</div>
+</main>
+<footer class="footer">
+<div class="wrap">
+<div class="footer-top">
+<div>
+<a class="brand" href="index.html">
+<span class="brand-name">fieldwork<small>Garden design studio</small>
+</span>
+</a>
+<p>Thoughtful gardens. Room to grow.<br>Based in Bath, working across Somerset.</p>
+</div>
+<div>
+<h3>Explore</h3>
+<ul>
+<li>
+<a href="gardens.html">Our gardens</a>
+</li>
+<li>
+<a href="services.html">Services</a>
+</li>
+<li>
+<a href="about.html">The studio</a>
+</li>
+<li>
+<a href="faq.html">Questions &amp; answers</a>
+</li>
+</ul>
+</div>
+<div>
+<h3>Get in touch</h3>
+<ul>
+<li>
+<a href="contact.html">Plan your garden</a>
+</li>
+<li>Monday–Friday, 9am–5pm</li>
+<li>Bath &amp; Somerset</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Fieldwork Garden Studio</span>
+<span>Fictional studio · Portfolio demonstration · <a href="credits.html">Photo credits &amp; demo information</a>
+</span>
+</div>
+</div>
+</footer>
+</body>
+</html>
